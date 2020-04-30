@@ -11,3 +11,26 @@ ax us-staging -- muzzle params push '{ "/app/PARAM_NAME": "param_value" }'
 ax us-prod -- muzzle params push '{ "/app/PARAM_NAME": "param_value" }'
 ```
 6. Now you can push the code that references the parameter
+
+## Retrieving parameters
+
+You can get parameters by app with: 
+```
+ax us-staging -- muzzle params pull /app
+ax us-prod -- muzzle params pull /app
+```
+
+Or get specific parameters:
+```
+ax us-staging -- muzzle params pull /app/PARAM_NAME
+ax us-prod -- muzzle params pull /app/PARAM_NAME
+```
+
+## Deleting parameters
+
+Accidentally put a parameter in the wrong spot? No problem! Delete it with:
+
+```
+ax us-staging -- aws ssm delete-parameter --name /app/PARAM_NAME
+ax us-prod -- aws ssm delete-parameter --name /app/PARAM_NAME
+```
