@@ -1,3 +1,9 @@
+# Updating, Retrieving, and Deleting Values from AWS Param Store
+
+## Requirements
+- Ability to use `aws okta exec`
+- Muzzle
+
 ## Updating param store variables
 
 1. Update the config file in foundry-harness mapping the path of the parameter to the name of the variable
