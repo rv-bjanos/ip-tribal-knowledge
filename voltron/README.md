@@ -4,7 +4,7 @@ But understand that running a microservice application is really tricky.
 
 There are many improvements that Voltron needs, but here are some hacky workarounds for specific use cases.
 
-## I need to run integration tests for an http service
+## To run integration tests for an http service
 
 First, run `voltron start <service-name>` for each service that is being macrified. This will allow the databases to be copied to the new service.
 
